@@ -9,7 +9,7 @@ dap.listeners.before.event_exited["dapui_config"] = function() dapui.close() end
 -- https://emojipedia.org/en/stickers/search?q=circle
 vim.fn.sign_define('DapBreakpoint',
   {
-    text = '⚪',
+    text = '🔴',
     texthl = 'DapBreakpointSymbol',
     linehl = 'DapBreakpoint',
     numhl = 'DapBreakpoint'
@@ -20,13 +20,13 @@ vim.fn.sign_define('DapBreakpoint',
 vim.fn.sign_define('DapStopped',
   {
     text = '🔴',
-    texthl = 'yellow',
+    texthl = 'DapStoppedSymbol',
     linehl = 'DapBreakpoint',
     numhl = 'DapBreakpoint'
   })
 vim.fn.sign_define('DapBreakpointRejected',
   {
-    text = '⭕',
+    text = '⚪',
     texthl = 'DapStoppedSymbol',
     linehl = 'DapBreakpoint',
     numhl = 'DapBreakpoint'

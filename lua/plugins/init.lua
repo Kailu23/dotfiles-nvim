@@ -35,10 +35,10 @@ return {
         "vimdoc",
         "html",
         "css",
-      
+
         -- !
         "c_sharp",
-        "razor"
+        "razor",
       },
     },
   },
@@ -51,22 +51,22 @@ return {
       },
       ensure_installed = {
         "lua-language-server",
-        
         "xmlformatter",
-        "csharpier",
-        "prettier",
-      
         "stylua",
         "bicep-lsp",
         "html-lsp",
         "css-lsp",
         "eslint-lsp",
         "typescript-language-server",
+        "csharpier",
+        "prettier",
         "json-lsp",
-        "rust-analyzer",
+        "yaml-language-server",
+        "markdown-oxide",
 
         -- !
         "roslyn",
+        "netcoredbg"
         -- "csharp-language-server",
         -- "omnisharp",
       },
@@ -109,35 +109,35 @@ return {
     requires = {
       {
         "Issafalcon/neotest-dotnet",
-      }
+      },
     },
     dependencies = {
       "nvim-neotest/nvim-nio",
       "nvim-lua/plenary.nvim",
       "antoinemadec/FixCursorHold.nvim",
-      "nvim-treesitter/nvim-treesitter"
-    }
+      "nvim-treesitter/nvim-treesitter",
+    },
   },
   {
     "Issafalcon/neotest-dotnet",
     lazy = false,
     dependencies = {
-      "nvim-neotest/neotest"
-    }
+      "nvim-neotest/neotest",
+    },
   },
   {
-    'ramboe/ramboe-dotnet-utils',
-    dependencies = { 'mfussenegger/nvim-dap' }
+    "ramboe/ramboe-dotnet-utils",
+    dependencies = { "mfussenegger/nvim-dap" },
   },
--- .config/nvim/lua/plugins/init.lua
--- ...
+  -- .config/nvim/lua/plugins/init.lua
+  -- ...
   {
     "rachartier/tiny-inline-diagnostic.nvim",
     event = "VeryLazy", -- Or `LspAttach`
-    priority = 1000,    -- needs to be loaded in first
+    priority = 1000, -- needs to be loaded in first
     config = function()
-      require('tiny-inline-diagnostic').setup()
-      vim.diagnostic.config({ virtual_text = false }) -- Only if needed in your configuration, if you already have native LSP diagnostics
-    end
+      require("tiny-inline-diagnostic").setup()
+      vim.diagnostic.config { virtual_text = false } -- Only if needed in your configuration, if you already have native LSP diagnostics
+    end,
   },
 }

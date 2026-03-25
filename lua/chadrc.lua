@@ -6,7 +6,7 @@
 local M = {}
 
 M.base46 = {
-	theme = "tokyonight",
+	theme = "falcon-custom",
 
   hl_override = {
     Type = { bold = true, italic = false },

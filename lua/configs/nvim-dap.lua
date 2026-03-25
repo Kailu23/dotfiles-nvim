@@ -16,11 +16,11 @@ dap.adapters.netcoredbg = netcoredbg_adapter -- needed for normal debugging
 dap.adapters.coreclr = netcoredbg_adapter -- needed for unit test debugging
 dap.defaults.netcoredbg_adapter.terminal_win_cmd = '50vsplit new'
 dap.defaults.netcoredbg_adapter.focus_terminal = true
-dap.defaults.netcoredbg_adapter.force_external_terminal = true
-dap.defaults.netcoredbg_adapter.external_terminal = {
-  command = "bash.exe",
-  args = { "-e" },
-}
+-- dap.defaults.netcoredbg_adapter.force_external_terminal = true
+-- dap.defaults.netcoredbg_adapter.external_terminal = {
+--   command = "bash.exe",
+--   args = { "-e" },
+-- }
 
 dap.configurations.cs = {
   {
@@ -31,7 +31,7 @@ dap.configurations.cs = {
       -- return vim.fn.input("Path to dll: ", vim.fn.getcwd() .. "/src/", "file")
       return require("dap-dll-autopicker").build_dll_path()
     end,
-    console = "externalTerminal",
+    console = "integratedTerminal",
     stopAtEntry = true,
     runInTerminal = true,
     -- justMyCode = false,
@@ -67,7 +67,7 @@ map("n", "<C-S-F5>", "<Cmd>lua require'dap'.restart()<CR>", opts)
 map("n", "<F6>", "<Cmd>lua require'dap'.pause()<CR>", opts)
 -- map("n", "<F6>", "<Cmd>lua require('neotest').run.run({strategy = 'dap'})<CR>", opts)
 map("n", "<F9>", "<Cmd>lua require'dap'.toggle_breakpoint()<CR>", opts)
-map("n", "<C-F9>", "<Cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", opts)
+map("n", "<C-F9>", "<Cmd>lua require'dap'.set_breakpoint(vim.fn.input('Condition: '))<CR>", opts)
 map("n", "<C-S-A-F9>", "<Cmd>lua require'dap'.clear_breakpoints()<CR>", opts)
 map("n", "<F10>", "<Cmd>lua require'dap'.step_over()<CR>", opts)
 map("n", "<F11>", "<Cmd>lua require'dap'.step_into()<CR>", opts)
