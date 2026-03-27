@@ -1,3 +1,4 @@
+-- vim.api.nvim_set_hl(0, "DapBreakpointSymbol", {fg = "#ff0000"})
 -- Credits to https://github.com/fenetikm/falcon as its the orignal theme
 -- This is a modified version of original theme
 ---@type Base46Table
