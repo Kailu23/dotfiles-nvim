@@ -5,6 +5,8 @@ require "nvchad.mappings"
 local map = vim.keymap.set
 -- override nvchad.mappings here
 require("custom-mappings.mappings-lsp")
+require("custom-mappings.mappings-dap")
+require("custom-mappings.mappings-workspaces")
 
 
 map("n", ";", ":", { desc = "CMD enter command mode" })

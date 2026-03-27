@@ -66,7 +66,7 @@ return {
 
         -- !
         "roslyn",
-        "netcoredbg"
+        "netcoredbg",
         -- "csharp-language-server",
         -- "omnisharp",
       },

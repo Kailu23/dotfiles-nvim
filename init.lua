@@ -31,14 +31,15 @@ dofile(vim.g.base46_cache .. "statusline")
 
 require "options"
 require "autocmds"
+require "workspaces".setup()
+
 
 vim.schedule(function()
   require "mappings"
 end)
 
-require("neotest").setup({
+require("neotest").setup {
   adapters = {
-    require("neotest-dotnet")
-  }
-})
-
+    require "neotest-dotnet",
+  },
+}

@@ -15,4 +15,5 @@ local opt = {
   -- ...
 }
 
-require("tiny-inline-diagnostic").setup(opt)
+return opt
+-- require("tiny-inline-diagnostic").setup(opt)
