@@ -145,6 +145,9 @@ return {
   {
     "ray-x/lsp_signature.nvim",
     event = "LspAttach",
-    opts = require("configs.lsp-signature")
+    opts = require "configs.lsp-signature",
+  },
+  {
+    "olrtg/nvim-emmet",
   },
 }
