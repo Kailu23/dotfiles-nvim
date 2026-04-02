@@ -1,9 +1,13 @@
 require("nvchad.configs.lspconfig").defaults()
 
 -- local servers = { "html", "cssls", "lua-language-server", "emmet-ls" }
-local servers = { "cssls", "lua-language-server", "emmet_language_server"}
-vim.lsp.enable(servers)
+local servers = { "cssls", "lua-language-server", "emmet_language_server", "typescript-language-server"}
 vim.lsp.config("emmet", {})
+vim.lsp.config("typescript-language-server", {
+    cmd = {"typescript-language-server", "--stdio"},
+    filetypes = {"javascript", "typescript"},
+})
+vim.lsp.enable(servers)
 
 -- read :h vim.lsp.config for changing options of lsp servers 
 vim.lsp.config("roslyn", {})
