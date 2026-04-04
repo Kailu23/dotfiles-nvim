@@ -46,3 +46,21 @@ require("neotest").setup {
 
 vim.g.dotnet_errors_only = true
 vim.g.dotnet_show_project_file = false
+require("tiny-inline-diagnostic").setup({
+  -- ...
+  signs = {
+    left = "",
+    right = "",
+    diag = "●",
+    arrow = "    ",
+    up_arrow = "    ",
+    vertical = " │",
+    vertical_end = " └",
+  },
+  blend = {
+    factor = 0.22,
+  },
+  -- ...
+})
+
+require("configs.lsp-overloads-config")
