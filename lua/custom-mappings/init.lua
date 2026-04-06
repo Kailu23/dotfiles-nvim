@@ -1,3 +1,4 @@
+require("custom-mappings.mappings-compiler")
 require("custom-mappings.mappings-dap")
 require("custom-mappings.mappings-emmet")
 require("custom-mappings.mappings-lsp")
