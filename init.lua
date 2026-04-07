@@ -62,5 +62,3 @@ require("tiny-inline-diagnostic").setup({
   },
   -- ...
 })
-
-require("configs.lsp-overloads-config")
