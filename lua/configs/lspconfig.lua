@@ -1,7 +1,7 @@
 require("nvchad.configs.lspconfig").defaults()
 
 -- local servers = { "html", "cssls", "lua-language-server", "emmet-ls" }
-local servers = { "cssls", "lua-language-server", "emmet_language_server", "typescript-language-server", "markdown_oxide"}
+local servers = { "cssls", "lua-language-server", "emmet_language_server", "typescript-language-server", "markdown_oxide", "clangd"}
 vim.lsp.config("emmet", {})
 vim.lsp.config("typescript-language-server", {
     cmd = {"typescript-language-server", "--stdio"},
