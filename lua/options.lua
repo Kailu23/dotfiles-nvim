@@ -7,6 +7,7 @@ vim.opt.numberwidth = 5
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
+vim.opt.cursorlineopt = "line,number"
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
