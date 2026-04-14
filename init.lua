@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46/"
 vim.g.mapleader = " "
 
@@ -33,7 +34,6 @@ require "options"
 require "autocmds"
 require "workspaces".setup()
 
-
 vim.schedule(function()
   require "mappings"
 end)
@@ -47,7 +47,6 @@ require("neotest").setup {
 vim.g.dotnet_errors_only = true
 vim.g.dotnet_show_project_file = false
 require("tiny-inline-diagnostic").setup({
-  -- ...
   signs = {
     left = "",
     right = "",
@@ -60,5 +59,4 @@ require("tiny-inline-diagnostic").setup({
   blend = {
     factor = 0.22,
   },
-  -- ...
 })

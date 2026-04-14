@@ -1,30 +1,12 @@
 return {
-    "williamboman/mason.nvim",
-    opts = {
-      registries = {
-        "github:mason-org/mason-registry",
-        "github:Crashdummyy/mason-registry",
-      },
-      ensure_installed = {
-        "lua-language-server",
-        "xmlformatter",
-        "stylua",
-        "bicep-lsp",
-        "html-lsp",
-        "css-lsp",
-        "eslint-lsp",
-        "typescript-language-server",
-        "csharpier",
-        "prettier",
-        "json-lsp",
-        "yaml-language-server",
-        "markdown-oxide",
-
-        -- !
-        "roslyn",
-        "netcoredbg",
-        -- "csharp-language-server",
-        -- "omnisharp",
-      },
+  "mason-org/mason.nvim",
+  opts = {
+    log_level = vim.log.levels.DEBUG,
+    registries = {
+      "github:mason-org/mason-registry",
+      "github:Crashdummyy/mason-registry",
     },
-  }
+    ensure_installed = {
+    },
+  },
+}
