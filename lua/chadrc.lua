@@ -27,35 +27,6 @@ M.base46 = {
 -- }
 
 M.mason = {
-  pkgs = {
-    "bash-language-server",
-    "bicep-lsp",
-    "clangd",
-    "codelldb",
-    "csharpier",
-    "css-lsp",
-    "css-variables-language-server",
-    "cssmodules-language-server",
-    "emmet-language-server",
-    "emmylua_ls",
-    "eslint-lsp",
-    "html-lsp",
-    "js-debug-adapter",
-    "json-lsp",
-    "local-lua-debugger-vscode",
-    "lua-language-server",
-    "markdown-oxide",
-    "netcoredbg",
-    "prettier",
-    "roslyn",
-    "rust-analyzer",
-    "sqlls",
-    "sql-formatter",
-    "stylua",
-    "typescript-language-server",
-    "xmlformatter",
-    "zls",
-    "yaml-language-server",
-  },
+  pkgs = require("mason_packages").get(),
 }
 return M
