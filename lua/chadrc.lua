@@ -19,6 +19,8 @@ M.base46 = {
   },
 }
 
+M.lsp = { signature = false}
+
 M.ui = {
     telescope = {
         style = "bordered"

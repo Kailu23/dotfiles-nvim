@@ -20,9 +20,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
     local bufnr = args.buf
 
     if capabilities.signatureHelpProvider then
-      -- remove trigger characters so roslyn doesn't automatically display the signature help
-      capabilities.signatureHelpProvider.triggerCharacters = {}
-      capabilities.signatureHelpProvider.retriggerCharacters = {}
       local lsp_overloads_ok, lsp_overloads = pcall(require, "lsp-overloads")
       if lsp_overloads_ok then
         lsp_overloads.setup(client, {
