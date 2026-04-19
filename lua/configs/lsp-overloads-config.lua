@@ -24,12 +24,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
       if lsp_overloads_ok then
         lsp_overloads.setup(client, {
           ui = {
-            close_events = { "CursorMoved", "CursorMovedI", "InsertCharPre" },
+            close_events = { "CursorMoved", "CursorMovedI", "InsertCharPre", "InsertLeave", "TextChangedI"},
             floating_window_above_cur_line = true,
             silent = true,
             border = "rounded",
           },
-          display_automatically = false,
+          display_automatically = true,
         })
       end
 
