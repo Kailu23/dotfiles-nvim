@@ -1,6 +1,6 @@
 return {
   "seblyng/roslyn.nvim",
-  lazy = false,
+  lazy = "LspAttach",
   ---@module 'roslyn.config'
   ---@type RoslynNvimConfig
   ft = { "cs", "razor" },
