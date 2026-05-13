@@ -21,6 +21,8 @@ local servers = {
   "ts_ls",
   "zls",
   "yamlls",
+  "tailwindcss-language-server",
+  "phpactor",
 }
 -- vim.lsp.config("emmet", {})
 -- vim.lsp.config("typescript-language-server", {

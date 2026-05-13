@@ -18,4 +18,6 @@ return {
     "typescript-language-server",
     "zls",
     "yaml-language-server",
+    "tailwindcss-language-server",
+    "phpactor",
 }
