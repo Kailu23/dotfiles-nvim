@@ -1,5 +1,6 @@
 require "nvchad.options"
 
+local system = vim.loop.os_uname().sysname
 -- add yours here!
 
 -- Set the width of the line number column
@@ -27,13 +28,15 @@ vim.o.scroll = 15
 
 vim.opt.updatetime = 50
 
+if system == "Windows_NT" then
+  -- set shell
+  vim.opt.shell = "cmd.exe"
+  vim.opt.shellcmdflag = "/c"
+  -- vim.opt.shellquote = ""
+  -- vim.opt.shellxquote = ""
+  vim.opt.shellslash = false
+end
 -- vim.opt.colorcolumn = "80"
--- set shell
-vim.opt.shell = "cmd.exe"
-vim.opt.shellcmdflag = "/c"
--- vim.opt.shellquote = ""
--- vim.opt.shellxquote = ""
-vim.opt.shellslash = false
 -- configer make
 vim.g.dotnet_errors_only = true
 vim.g.dotnet_show_project_file = false
