@@ -36,14 +36,14 @@ vim.api.nvim_create_autocmd("LspAttach", {
       vim.keymap.set(
         "n",
         "<A-s>",
-        "<CMD>LspOverloadsSignature<CR>",
+        "<CMD>LspOverloads signature<CR>",
         { noremap = true, silent = true, desc = "Show signature help with overloads", buffer = args.buf }
       )
 
       vim.keymap.set(
         "i",
         "<A-s>",
-        "<cmd>LspOverloadsSignature<CR>",
+        "<CMD>LspOverloads signature<CR>",
         -- function() vim.lsp.buf.signature_help() end,
         { noremap = true, silent = true, desc = "Show signature help with overloads", buffer = args.buf }
       )
