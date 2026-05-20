@@ -8,10 +8,12 @@ return {
       "vimdoc",
       "html",
       "css",
-
-      -- !
       "c_sharp",
+      "bicep",
       "razor",
+      "yaml",
+      "caddy",
+      "bash",
     },
   },
 }
