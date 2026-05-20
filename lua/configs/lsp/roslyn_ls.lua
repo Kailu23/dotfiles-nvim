@@ -1,4 +1,5 @@
-vim.lsp.config("roslyn", {
+return {
+  filetypes = { "razor", "cs" },
   settings = {
     ["csharp|inlay_hints"] = {
       csharp_enable_inlay_hints_for_implicit_object_creation = true,
@@ -14,5 +15,9 @@ vim.lsp.config("roslyn", {
       dotnet_suppress_inlay_hints_for_parameters_that_match_argument_name = true,
       dotnet_suppress_inlay_hints_for_parameters_that_match_method_intent = true,
     },
+    ["csharp|background_analysis"] = {
+      dotnet_analyzer_diagnostics_scope = "openFiles",
+      dotnet_compiler_diagnostics_scope = "openFiles",
+    },
   },
-})
+}
