@@ -12,7 +12,6 @@ return {
     "json-lsp",
     "lua-language-server",
     "markdown-oxide",
-    "roslyn",
     "rust-analyzer",
     "sqlls",
     "typescript-language-server",
