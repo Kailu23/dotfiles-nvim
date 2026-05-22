@@ -17,3 +17,6 @@ map("t", "<ESC>", "<C-\\><C-n>", { desc = "enter normal mode"})
 
 map("n", "<leader>qo", "<cmd>copen<CR>", vim.tbl_extend('force', opts, { desc = "Open quickfix window"}) )
 map("n", "<leader>qc", "<cmd>cclose<CR>", vim.tbl_extend('force', opts, { desc = "Close quickfix window"}))
+
+map("v", "K", ":m '<-2<CR>gv=gv", vim.tbl_extend('force', opts, { desc = "Move highlighted line/lines up"}))
+map("v", "J", ":m '>+1<CR>gv=gv", vim.tbl_extend('force', opts, { desc = "Move highlighted line/lines up"}))
