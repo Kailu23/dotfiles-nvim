@@ -8,11 +8,6 @@ M = {
   },
 }
 
-vim.keymap.set(
-    { "n", "i"},
-  "<A-s>",
-  "<CMD>LspOverloads signature<CR>",
-  { noremap = true, silent = true, desc = "Show signature help with overloads" }
-)
+vim.keymap.set({ "n", "i"},  "<A-s>",  "<CMD>LspOverloads signature<CR>",  { noremap = true, silent = true, desc = "Show signature help with overloads" })
 
 return M

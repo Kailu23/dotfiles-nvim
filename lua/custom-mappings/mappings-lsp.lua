@@ -16,6 +16,3 @@ map({ "n", "v"}, "gra", "<CMD>lua vim.lsp.buf.code_action()<CR>", vim.tbl_extend
 map({ "n", "v"}, "gra", "<CMD>lua vim.lsp.buf.code_action()<CR>", vim.tbl_extend("force", opts, { desc = "code action"}))
 map({ "n", "v"}, "grn",  "<CMD>lua vim.lsp.buf.rename()<CR>", vim.tbl_extend("force", opts, { desc = "LSP Rename"}))
 
-
-vim.keymap.set({ "n", "i" }, "<A-s>", "<cmd>lua require(\"lsp_signature\").toggle_float_win()<CR>", { noremap = true, silent = true, desc = "LSP Show method overloads"})
-vim.keymap.set({ "n" , "i"}, '<A-S>', "<cmd>lua vim.lsp.buf.signature_help()<cr>", { silent = true, noremap = true, desc = "LSP Show method signature" })
