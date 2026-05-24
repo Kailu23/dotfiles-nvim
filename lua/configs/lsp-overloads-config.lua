@@ -1,9 +1,11 @@
-require("lsp-overloads").setup({
+local M = {}
+
+M = {
   ui = {
     border = "rounded",
     floating_window_above_cur_line = true,
   },
-})
+}
 
 vim.keymap.set(
     { "n", "i"},
@@ -11,3 +13,5 @@ vim.keymap.set(
   "<CMD>LspOverloads signature<CR>",
   { noremap = true, silent = true, desc = "Show signature help with overloads" }
 )
+
+return M

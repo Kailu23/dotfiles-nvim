@@ -2,6 +2,8 @@ return {
   "Issafalcon/lsp-overloads.nvim",
   event = "LspAttach",
   config = function()
-    require ("configs.lsp-overloads-config")
+    local lsp_overloads = require "lsp-overloads"
+    local opts = require "configs.lsp-overloads-config"
+    lsp_overloads.setup(opts)
   end,
 }
