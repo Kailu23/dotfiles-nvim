@@ -6,7 +6,6 @@ return {
     "css-variables-language-server",
     "cssmodules-language-server",
     "emmet-language-server",
-    "emmylua_ls",
     "eslint-lsp",
     "html-lsp",
     "json-lsp",
