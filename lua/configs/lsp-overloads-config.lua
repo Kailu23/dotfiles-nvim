@@ -4,6 +4,7 @@ M = {
   ui = {
     border = "rounded",
     floating_window_above_cur_line = true,
+    max_height = 15,
   },
 }
 
