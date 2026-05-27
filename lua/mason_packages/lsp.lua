@@ -1,4 +1,5 @@
 return {
+    "basedpyright",
     "bash-language-server",
     "bicep-lsp",
     "clangd",
