@@ -19,4 +19,5 @@ return {
     "yaml-language-server",
     "tailwindcss-language-server",
     "phpactor",
+    "docker-language-server",
 }
