@@ -57,6 +57,13 @@ opts = {
         score_offset = 95,
         module = "blink.cmp.sources.snippets",
       },
+      path = {
+        opts = {
+          get_cwd = function(_)
+            return vim.fn.getcwd()
+          end,
+        },
+      },
     },
   },
 
