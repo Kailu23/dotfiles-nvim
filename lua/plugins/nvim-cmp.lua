@@ -8,4 +8,5 @@ return {
 
     return opts
   end,
+  enabled = false,
 }
