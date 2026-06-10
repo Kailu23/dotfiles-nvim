@@ -53,7 +53,7 @@ opts = {
         name = "snippets",
         enabled = true,
         max_items = 15,
-        min_keyword_length = 2,
+        min_keyword_length = 1,
         score_offset = 95,
         module = "blink.cmp.sources.snippets",
       },
