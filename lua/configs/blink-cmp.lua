@@ -47,14 +47,12 @@ opts = {
         enabled = true,
         module = "blink.cmp.sources.lsp",
         min_keyword_length = 0,
-        score_offset = 90,
       },
       snippets = {
         name = "snippets",
         enabled = true,
         max_items = 15,
         min_keyword_length = 1,
-        score_offset = 95,
         module = "blink.cmp.sources.snippets",
       },
       path = {
