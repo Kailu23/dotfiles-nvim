@@ -1,6 +1,12 @@
 local dap = require "dap"
+local system = vim.loop.os_uname().sysname
+local mason_path = ""
 
-local mason_path = vim.fn.stdpath "data" .. "/mason/packages/netcoredbg/netcoredbg/netcoredbg.exe"
+if system == "Windows_NT" then
+  mason_path = vim.fn.stdpath "data" .. "/mason/packages/netcoredbg/netcoredbg/netcoredbg.exe"
+elseif system == "Linux" then
+  mason_path = vim.fn.stdpath "data" .. "/mason/packages/netcoredbg/netcoredbg"
+end
 
 local netcoredbg_adapter = {
   type = "executable",
@@ -32,7 +38,7 @@ dap.configurations.cs = {
       return require("dap-dll-autopicker").build_dll_path()
     end,
     console = "integratedTerminal",
-    stopAtEntry = true,
+    -- stopAtEntry = true,
     runInTerminal = true,
     -- justMyCode = false,
     -- stopAtEntry = false,
