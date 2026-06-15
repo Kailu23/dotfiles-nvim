@@ -1,42 +1,37 @@
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
-map(
-  "n",
-  "<F5>",
-  "<Cmd>lua require'dap'.continue()<CR>",
-  vim.tbl_extend("force", opts, { desc = "DAP: Continue/Start" })
-)
-map(
-  "n",
-  "<S-F5>",
-  "<Cmd>lua require'dap'.terminate({{restart = false}})<CR>",
-  vim.tbl_extend("force", opts, { desc = "DAP: Terminate" })
-)
-map("n", "<C-S-F5>", "<Cmd>lua require'dap'.restart()<CR>", vim.tbl_extend("force", opts, { desc = "DAP: Restart" }))
-map("n", "<F6>", "<Cmd>lua require'dap'.pause()<CR>", vim.tbl_extend("force", opts, { desc = "DAP: Pause" }))
+map("n", "<F5>", function()
+  require("dap").continue()
+end, vim.tbl_extend("force", opts, { desc = "DAP: Continue/Start" }))
+map("n", "<S-F5>", function()
+  require("dap").terminate { { restart = false } }
+end, vim.tbl_extend("force", opts, { desc = "DAP: Terminate" }))
+map("n", "<C-S-F5>", function()
+  require("dap").restart()
+end, vim.tbl_extend("force", opts, { desc = "DAP: Restart" }))
+map("n", "<F6>", function()
+  require("dap").pause()
+end, vim.tbl_extend("force", opts, { desc = "DAP: Pause" }))
 -- map("n", "<F6>", "<Cmd>lua require('neotest').run.run({strategy = 'dap'})<CR>", vim.tbl_extend("force", opts, { desc = ""}))
-map(
-  "n",
-  "<F9>",
-  "<Cmd>lua require'dap'.toggle_breakpoint()<CR>",
-  vim.tbl_extend("force", opts, { desc = "DAP: Toggle breakpoint" })
-)
-map(
-  "n",
-  "<C-F9>",
-  "<Cmd>lua require'dap'.set_breakpoint(vim.fn.input('Condition: '))<CR>",
-  vim.tbl_extend("force", opts, { desc = "DAP: Toggle conditional breakpoint" })
-)
-map(
-  "n",
-  "<C-S-A-F9>",
-  "<Cmd>lua require'dap'.clear_breakpoints()<CR>",
-  vim.tbl_extend("force", opts, { desc = "DAP: Clear all breakpoints" })
-)
-map("n", "<F10>", "<Cmd>lua require'dap'.step_over()<CR>", vim.tbl_extend("force", opts, { desc = "DAP: Step over" }))
-map("n", "<F11>", "<Cmd>lua require'dap'.step_into()<CR>", vim.tbl_extend("force", opts, { desc = "DAP: Step into" }))
-map("n", "<S-F11>", "<Cmd>lua require'dap'.step_out()<CR>", vim.tbl_extend("force", opts, { desc = "DAP: Step out" }))
+map("n", "<F9>", function()
+  require("dap").toggle_breakpoint()
+end, vim.tbl_extend("force", opts, { desc = "DAP: Toggle breakpoint" }))
+map("n", "<C-F9>", function()
+  require("dap").set_breakpoint(vim.fn.input "Condition: ")
+end, vim.tbl_extend("force", opts, { desc = "DAP: Toggle conditional breakpoint" }))
+map("n", "<C-S-A-F9>", function()
+  require("dap").clear_breakpoints()
+end, vim.tbl_extend("force", opts, { desc = "DAP: Clear all breakpoints" }))
+map("n", "<F10>", function()
+  require("dap").step_over()
+end, vim.tbl_extend("force", opts, { desc = "DAP: Step over" }))
+map("n", "<F11>", function()
+  require("dap").step_into()
+end, vim.tbl_extend("force", opts, { desc = "DAP: Step into" }))
+map("n", "<S-F11>", function()
+  require("dap").step_out()
+end, vim.tbl_extend("force", opts, { desc = "DAP: Step out" }))
 -- map("n", "<F12>", "<Cmd>lua require'dap'.step_out()<CR>", vim.tbl_extend("force"DAP: ""}))
 map(
   "n",
@@ -57,7 +52,7 @@ map(
   vim.tbl_extend("force", opts, { desc = "DAP: Run nearest test" })
 )
 
--- map("n", "<leader>de", function () 
+-- map("n", "<leader>de", function ()
 -- local dap = require("dap")
 --   local var = vim.fn.expand("<cword>")
 --   dap.set_variable(var)
@@ -74,6 +69,15 @@ map({ "n", "v" }, "<leader>dw", function()
   require("dapui").eval(nil, { enter = true })
 end, vim.tbl_extend("force", opts, { desc = "DAP: Add word under cursor to Watches" }))
 
-map({ "n", "v" }, "Q", function()
-  require("dapui").eval()
-end, vim.tbl_extend("force", opts, { desc = "DAP: Hover/eval a single value (opens a tiny window instead of expanding the full object)" }))
+map(
+  { "n", "v" },
+  "Q",
+  function()
+    require("dapui").eval()
+  end,
+  vim.tbl_extend(
+    "force",
+    opts,
+    { desc = "DAP: Hover/eval a single value (opens a tiny window instead of expanding the full object)" }
+  )
+)
