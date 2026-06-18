@@ -60,7 +60,7 @@ M.base_16 = {
 
 M.polish_hl = {
   defaults = {
-    NormalFloat = { bg = M.base_30.black },
+    Normal = { bg = "NONE"},
     FloatBorder = { fg = M.base_30.purple },
     PmenuSel = { bg = M.base_30.purple },
     CursorLine = { bg = M.base_30.dark_slate_gray },
