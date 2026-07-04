@@ -20,3 +20,5 @@ map("n", "<leader>qc", "<cmd>cclose<CR>", vim.tbl_extend("force", opts, { desc =
 
 map("v", "K", ":m '<-2<CR>gv=gv", vim.tbl_extend("force", opts, { desc = "Move highlighted line/lines up" }))
 map("v", "J", ":m '>+1<CR>gv=gv", vim.tbl_extend("force", opts, { desc = "Move highlighted line/lines up" }))
+
+map("n", "<A-a>", require("oil").open_float, vim.tbl_extend("force", opts, { desc = "Oil" }))
