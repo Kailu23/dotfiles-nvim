@@ -1,7 +1,7 @@
 return {
   "nvim-treesitter/nvim-treesitter",
   lazy = false,
-  build = "TSUpdate",
+  build = ":TSUpdate",
   opts = {
     ensure_installed = {
       "hyprlang",
