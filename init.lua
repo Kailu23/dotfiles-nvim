@@ -30,13 +30,9 @@ require("lazy").setup({
 dofile(vim.g.base46_cache .. "defaults")
 dofile(vim.g.base46_cache .. "statusline")
 
-require "core.options"
-require "core.autocmds"
+require("core")
 require "workspaces".setup()
 
-vim.schedule(function()
-  require "core.mappings"
-end)
 
 require("neotest").setup {
   adapters = {
