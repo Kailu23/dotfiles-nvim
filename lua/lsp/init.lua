@@ -1,12 +1,12 @@
 require("nvchad.configs.lspconfig").defaults()
 
-local lspPath = vim.fn.stdpath('config') .. "/lua/configs/lsp"
+local lspPath = vim.fn.stdpath('config') .. "/lua/lsp/servers"
 
 for _, file in ipairs(vim.fn.readdir(lspPath)) do
     if file:match("%.lua$") then
         local server = file:gsub("%.lua$", "")
 
-        local config = require("configs.lsp." .. server)
+        local config = require("lsp.servers." .. server)
 
         vim.lsp.config(server, config)
         vim.lsp.enable(server)
