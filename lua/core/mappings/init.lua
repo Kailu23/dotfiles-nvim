@@ -1,0 +1,6 @@
+require("core.mappings.compiler")
+require("core.mappings.dap")
+require("core.mappings.emmet")
+require("core.mappings.lsp")
+require("core.mappings.workspaces")
+require("core.mappings.inlay-hints")

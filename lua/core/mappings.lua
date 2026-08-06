@@ -5,7 +5,7 @@ local opts = { noremap = false, silent = true }
 
 local map = vim.keymap.set
 -- override nvchad.mappings here
-require("custom-mappings")
+require("core.mappings.init")
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>", { desc = "enter normal mode" })
