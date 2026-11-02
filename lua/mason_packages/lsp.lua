@@ -18,6 +18,6 @@ return {
     "zls",
     "yaml-language-server",
     "tailwindcss-language-server",
-    "phpactor",
+    "intelephense",
     "docker-language-server",
 }
