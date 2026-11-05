@@ -24,7 +24,6 @@ vim.opt.termguicolors = true
 
 -- Number of lines to keep above and below the cursor
 vim.opt.scrolloff = 64
-vim.o.scroll = 15
 
 vim.opt.updatetime = 50
 
@@ -40,3 +39,4 @@ end
 -- configer make
 vim.g.dotnet_errors_only = true
 vim.g.dotnet_show_project_file = false
+
