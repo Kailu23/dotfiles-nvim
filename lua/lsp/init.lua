@@ -1,5 +1,17 @@
-require("nvchad.configs.lspconfig").defaults()
+local nvlsp = require("nvchad.configs.lspconfig")
+dofile(vim.g.base46_cache .. "lsp")
+require("nvchad.lsp").diagnostic_config()
 
+vim.api.nvim_create_autocmd("LspAttach", {
+    callback = function(args)
+        nvlsp.on_attach(nil, args.buf)
+    end,
+})
+
+vim.lsp.config("*", {
+    capabilities = nvlsp.capabilities,
+    on_init = nvlsp.on_init,
+})
 local lspPath = vim.fn.stdpath('config') .. "/lua/lsp/servers"
 local servers = {}
 
